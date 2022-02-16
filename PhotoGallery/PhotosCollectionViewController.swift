@@ -31,22 +31,17 @@ class PhotosCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! PhotoCell
         
-        //cell.dogImageView.image?.symbolConfiguration = .unspecified
-        //cell.dogImageView.sizeToFit()
+        cell.layer.cornerRadius = 20
+        cell.dogImageView.clipsToBounds = true
         
-       // let imageName = photos[indexPath.item]
-       // let image = UIImage(named: imageName)
-       // cell.dogImageView.image = image
+        let imageName = photos[indexPath.item]
+        let image = UIImage(named: imageName)
+        cell.dogImageView.image = image
         
-        
-        //cell.dogImageView.clipsToBounds = true
-        //cell.dogImageView.scalesLargeContentImage = true
-         cell.backgroundColor = .black
-        // cell.layer.cornerRadius = 20
+        //cell.backgroundColor = .black
         
         return cell
     }
-    
 }
 
 extension PhotosCollectionViewController: UICollectionViewDelegateFlowLayout {
