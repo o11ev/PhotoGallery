@@ -46,8 +46,6 @@ class PhotosCollectionViewController: UICollectionViewController {
         let image = UIImage(named: imageName)
         cell.dogImageView.image = image
         
-        //cell.backgroundColor = .black
-        
         return cell
     }
 }
